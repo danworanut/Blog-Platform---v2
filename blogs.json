@@ -1,0 +1,44 @@
+{"blogs": [
+    {
+      "id": 1,
+      "title": "How to Learn JavaScript",
+      "category": "Programming",
+      "content": "Lorem ipsum...",
+      "author": "John Doe",
+      "views": 1200
+    },
+    {
+      "id": 2,
+      "title": "Tips for Healthy Living",
+      "category": "Health",
+      "content": "Lorem ipsum...",
+      "author": "Jane Doe",
+      "views": 800
+    },
+
+    {
+      "id": 3,
+      "title": "Why Japanese Website Look So Different",
+      "category": "Design",
+      "content": "Lorem ipsum...",
+      "author": "Jane Doe",
+      "views": 720
+    },
+    {
+      "id": 4,
+      "title": "14 habits that make you more focused than 98% of people",
+      "category": "Productivity",
+      "content": "Lorem ipsum...",
+      "author": "Jane Doe",
+      "views": 500
+    },
+    {
+      "id": 5,
+      "title": "Your Mac Terminal Doesn’t Have to Look Ugly. Upgrade It In a Few Minutes",
+      "category": "Programming",
+      "content": "Lorem ipsum...",
+      "author": "Jane Doe",
+      "views": 3000
+    }
+]
+}
