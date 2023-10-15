@@ -34,37 +34,53 @@
     </div>
 </section>
 
+<section class="search-box">
+<div class="heading">Discover Blogs </div>
+  <div class="search">  
+    
+    <form action="#">
+      <input type="text" id="input-box" placeholder="Search title blog">
+
+      <button id="search-btn">
+        <i class="fa fa-search" style="font-size: 18px;">
+        </i>
+      </button>
+
+    </form>
+  </div>
+
+  <div class="content-result">
+    <div id="results" class="card-search">
+    </div>
+  </div>
+</section>
+
+<section class="filter-category">
+
+  <div class="heading">Discover Category Blogs </div>
+
+  <div id="buttons">
+    <button class="button-value" onclick="fillterProduct('All')">All</button>
+    <button class="button-value" onclick="fillterProduct('Programming')">Programming</button>
+    <button class="button-value" onclick="fillterProduct('Design')">Design</button>
+    <button class="button-value" onclick="fillterProduct('Productivity')">Productivity</button>
+  </div>
+  <div class="blog-container">
+    
+  </div>
+
+</section>
+
   <section class="popular-blogs">
     <div class="heading">Popular Blogs </div>
-
-
-
-    <div class="content">
       <div class="card-pop">
         <!-- ส่วนนี้จะถูกใช้ในการแสดงข้อมูลบล็อกยอดนิยม -->
       </div>
-    </div>
+
   </section>
 
 
-  <section class="search-box">
-    <div class="search">
-      <form action="#">
-        <input type="text" id="input-box" placeholder="Search title blog">
 
-        <button id="search-btn">
-          <i class="fa fa-search" style="font-size: 18px;">
-          </i>
-        </button>
-
-      </form>
-    </div>
-
-    <div class="content">
-      <div id="results" class="card-search">
-      </div>
-    </div>
-  </section>
 
   <section class="statistics" id="statistics">
     <div class="statitic-box">
@@ -73,19 +89,7 @@
     </div>
   </section>
 
-  <section class="filter-category">
-    <div id="buttons">
-      <button class="button-value" onclick="fillterProduct('All')">All</button>
-      <button class="button-value" onclick="fillterProduct('Programming')">Programming</button>
-      <button class="button-value" onclick="fillterProduct('Design')">Design</button>
-      <button class="button-value" onclick="fillterProduct('Productivity')">Productivity</button>
-    </div>
-    <div class="content">
-    <div class="blog-container">
-      
-    </div>
-  </div>
-  </section>
+ 
 
 
 

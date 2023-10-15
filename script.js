@@ -1,4 +1,3 @@
-
 const searchBlogs = (keyword, blogs) => {
   return blogs.filter(blog => blog.title.toLowerCase().includes(keyword.toLowerCase()));
 };
@@ -40,6 +39,9 @@ function createCard(blog) {
   const card = document.createElement("div");
   card.classList.add("card",blog.category, "hide" );
 
+  const image = document.createElement("img");
+  image.src = blog.image;
+
   const title = document.createElement("h3");
   title.innerHTML = `${blog.title} <span class="tag-cloud">${blog.category}</span>`;
 
@@ -51,13 +53,16 @@ function createCard(blog) {
   author.innerHTML = `<i class="fa fa-user"></i> ${blog.author} &nbsp; <i class="fa-solid fa-eye"></i> ${blog.views}`;
 
 
-  const readMoreButton = document.createElement("button");
-  readMoreButton.textContent = "Read more";
+  const readMoreLink = document.createElement("a");
+  readMoreLink.classList.add("read-more-link");
+  readMoreLink.href = blog.id;
+  readMoreLink.textContent = "Read more";
 
+  card.appendChild(image);
   card.appendChild(title);
   card.appendChild(content);
   card.appendChild(author);
-  card.appendChild(readMoreButton);
+  card.appendChild(readMoreLink);
 
   return card;
 }
@@ -65,12 +70,16 @@ function createCard(blog) {
 
 function createPopularCard(blog) {
   const card = document.createElement("div");
-  card.classList.add("popCard" );
+  card.classList.add("popCard");
+
+  const image = document.createElement("img");
+  image.src = blog.image;
 
   const title = document.createElement("h3");
   title.innerHTML = `${blog.title} <span class="tag-cloud">${blog.category}</span>`;
 
   const content = document.createElement("p");
+  content.classList.add("content");
   content.textContent = blog.content;
 
   const author = document.createElement("p");
@@ -78,13 +87,16 @@ function createPopularCard(blog) {
   author.innerHTML = `<i class="fa fa-user"></i> ${blog.author} &nbsp; <i class="fa-solid fa-eye"></i> ${blog.views}`;
 
 
-  const readMoreButton = document.createElement("button");
-  readMoreButton.textContent = "Read more";
+  const readMoreLink = document.createElement("a");
+  readMoreLink.classList.add("read-more-link");
+  readMoreLink.href = blog.id;
+  readMoreLink.textContent = "Read more";
 
+  card.appendChild(image);
   card.appendChild(title);
   card.appendChild(content);
   card.appendChild(author);
-  card.appendChild(readMoreButton);
+  card.appendChild(readMoreLink);
 
   return card;
 }
@@ -164,10 +176,12 @@ function createPopularCard(blog) {
   const totalViewsElement = statisticsSection.querySelector('.total-views');
 
   // แสดงข้อมูลใน HTML
-  totalBlogsElement.textContent = `Total Blogs: ${totalBlogs}`;
-  totalViewsElement.textContent = `Total Views: ${totalViews}`;
+  totalBlogsElement.textContent = `Total Blogs ${totalBlogs}`;
+  totalViewsElement.textContent = `Total Views ${totalViews}`;
 })
 
 .catch(function (error) {
   console.error('เกิดข้อผิดพลาดในการดึงข้อมูล:', error);
  })
+
+ 
