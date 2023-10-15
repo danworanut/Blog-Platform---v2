@@ -9,6 +9,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
 header {
   position: sticky;
   top: 0;
@@ -19,8 +20,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
 }
-
 
 .logo {
   font-size: 1.8rem;
@@ -46,6 +47,37 @@ li a{
  color: #000;
 }
 
+li#btn-outline a {
+  color: #ff5722; /* สีของตัวอักษร */
+  border: 2px solid #ff5722; /* สีขอบ */
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+
+  /* เมื่อเมาส์วางอยู่บนปุ่ม */
+  &:hover {
+    background-color: #ff5722;
+    color: #fff; /* สีข้อความเมื่อ hover */
+    border: 2px solid transparent; /* ลบขอบเมื่อ hover */
+  }
+}
+
+li#btn-signin a {
+  color: #fff; /* สีของตัวอักษรเป็นสีดำ */
+  border: 2px solid #ff5722; /* สีขอบเป็นสีดำ */
+  background-color: #ff5722;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+
+  /* เมื่อเมาส์วางอยู่บนปุ่ม */
+  &:hover {
+    background-color: #e64a19;
+  }
+}
+
 .heading {
   font-size: 30px;
   font-weight: 600;
@@ -53,9 +85,46 @@ li a{
 }
 
 .hero {
-  width: 100%;
-  background: #2196F3;
+  background-image: url('img/hero\ \(2\).jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
 }
+
+/* Style for the hero content */
+.hero-content {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e64a19;
+}
+
 
 .card-pop {
   display: grid;
