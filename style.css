@@ -26,7 +26,7 @@
   gap: 1.5rem; /* ระยะห่างระหว่างการ์ด */
 }
 
-.card {
+.card, .popCard {
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 100%; /* กำหนดความกว้างของการ์ดให้เต็มกว้าง */
@@ -42,7 +42,7 @@
   font-size: 18px;
 }
 
-.card button {
+.card button,.popCard button {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -130,4 +130,32 @@ i {
 
 .content {
   margin-bottom: 2px;
+}
+
+
+.button-value {
+  background-color: transparent;
+  border: 2px solid #2196F3;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  color: #2196F3;
+  cursor: pointer;
+} 
+
+.active {
+
+  background-color: #2196F3;
+  color: #fff;
+}
+
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1.5rem; /* ระยะห่างระหว่างการ์ด */
+}
+
+.hide {
+  display: none;
 }

@@ -7,9 +7,65 @@ const popularBlogs = (blogs) => {
   return blogs.sort((a, b) => b.views - a.views).slice(0, 10);
 }
 
+function fillterProduct(value) {
+  let buttons = document.querySelectorAll(".button-value");
+  buttons.forEach((button) => {
+    if(value.toLowerCase() == button.innerText.toLowerCase()){
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+
+  let elements = document.querySelectorAll(".card");
+
+elements.forEach((element) => {
+  if(value.toLowerCase() == "all") {
+    element.classList.remove("hide");
+  }
+  else {
+    if(element.classList.contains(value)){
+      element.classList.remove("hide");
+    }
+    else {
+      element.classList.add("hide");
+    }
+  }
+});
+
+}
+
+
+function createCard(blog) {
+  const card = document.createElement("div");
+  card.classList.add("card",blog.category, "hide" );
+
+  const title = document.createElement("h3");
+  title.innerHTML = `${blog.title} <span class="tag-cloud">${blog.category}</span>`;
+
+  const content = document.createElement("p");
+  content.textContent = blog.content;
+
+  const author = document.createElement("p");
+  author.classList.add("author");
+  author.innerHTML = `<i class="fa fa-user"></i> ${blog.author} &nbsp; <i class="fa-solid fa-eye"></i> ${blog.views}`;
+
+
+  const readMoreButton = document.createElement("button");
+  readMoreButton.textContent = "Read more";
+
+  card.appendChild(title);
+  card.appendChild(content);
+  card.appendChild(author);
+  card.appendChild(readMoreButton);
+
+  return card;
+}
+
+
 function createPopularCard(blog) {
   const card = document.createElement("div");
-  card.classList.add("card");
+  card.classList.add("popCard" );
 
   const title = document.createElement("h3");
   title.innerHTML = `${blog.title} <span class="tag-cloud">${blog.category}</span>`;
@@ -39,6 +95,17 @@ function createPopularCard(blog) {
 
     // เข้าถึงอาร์เรย์ "blogs" ใน JSON
     const blogs = data.blogs;
+
+    const blogContainer = document.querySelector(".blog-container");
+
+    // สร้างและเพิ่มบล็อกในคอนเทนเนอร์
+    blogs.forEach(blog => {
+      const cardBox = createCard(blog);
+      blogContainer.appendChild(cardBox);
+    });
+
+
+
 
 
     const filterPopularBlogs = popularBlogs(blogs);
