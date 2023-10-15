@@ -4,8 +4,46 @@
 *{
   margin: 0;
   padding: 0;
+  text-decoration: none;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+}
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.logo a {
+  color: #000;
+}
+
+ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+li {
+ font-size: 1.2rem;
+ font-weight: 500;
+}
+li a{
+ color: #000;
 }
 
 .heading {
@@ -14,10 +52,10 @@
   margin: 2rem;
 }
 
-/* .flex {
-  display: flex;
-  justify-content: center;
-} */
+.hero {
+  width: 100%;
+  background: #2196F3;
+}
 
 .card-pop {
   display: grid;
