@@ -84,3 +84,23 @@ function createPopularCard(blog) {
 
 
 
+ fetch('statistics.json')
+ .then((res) => res.json())
+ .then(function (data) {
+  // ดึงข้อมูลที่คุณต้องการแสดง
+  const totalBlogs = data.statistics.totalBlogs;
+  const totalViews = data.statistics.totalViews;
+
+  // เข้าถึงและแก้ไข HTML โดยใช้ ID
+  const statisticsSection = document.getElementById("statistics");
+  const totalBlogsElement = statisticsSection.querySelector('.total-blogs');
+  const totalViewsElement = statisticsSection.querySelector('.total-views');
+
+  // แสดงข้อมูลใน HTML
+  totalBlogsElement.textContent = `Total Blogs: ${totalBlogs}`;
+  totalViewsElement.textContent = `Total Views: ${totalViews}`;
+})
+
+.catch(function (error) {
+  console.error('เกิดข้อผิดพลาดในการดึงข้อมูล:', error);
+ })
