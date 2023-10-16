@@ -127,6 +127,19 @@
  margin: 2rem 5rem;
 }
 
+.image-blog {
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-blog img {
+    width: 100%;
+  
+}
+
+
 
 
 
