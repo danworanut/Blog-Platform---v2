@@ -55,7 +55,7 @@ function createCard(blog) {
 
   const readMoreLink = document.createElement("a");
   readMoreLink.classList.add("read-more-link");
-  readMoreLink.href = blog.id;
+  readMoreLink.href = "blog.html";
   readMoreLink.textContent = "Read more";
 
   card.appendChild(image);
@@ -89,7 +89,7 @@ function createPopularCard(blog) {
 
   const readMoreLink = document.createElement("a");
   readMoreLink.classList.add("read-more-link");
-  readMoreLink.href = blog.id;
+  readMoreLink.href = "blog.html";
   readMoreLink.textContent = "Read more";
 
   card.appendChild(image);

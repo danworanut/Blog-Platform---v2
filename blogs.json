@@ -30,7 +30,7 @@
     {
       "id": 4,
       "title": "14 habits that make you more focused than 98% of people",
-      "image": "img/hero.jpg",
+      "image": "img/twice.jpg",
       "category": "Productivity",
       "content": "Lorem ipsum...",
       "author": "Jane Doe",
@@ -39,9 +39,9 @@
     {
       "id": 5,
       "title": "Your Mac Terminal Doesn’t Have to Look Ugly. Upgrade It In a Few Minutes",
-      "image": "img/hero.jpg",
+      "image": "img/janie-top.jpg",
       "category": "Programming",
-      "content": "Lorem ipsum..vcbvcbcvb.",
+      "content": "Lorem ipsum...",
       "author": "Jane Doe",
       "views": 3000
     }
