@@ -1,3 +1,15 @@
+function toggleHam(x) {
+  x.classList.toggle("change");
+
+  let myMenu = document.getElementById('menu');
+  if (myMenu.className === 'menu') {
+      myMenu.className += ' menu-active' 
+  } else {
+      myMenu.className = 'menu'
+  }
+}
+
+
 const searchBlogs = (keyword, blogs) => {
   return blogs.filter(blog => blog.title.toLowerCase().includes(keyword.toLowerCase()));
 };

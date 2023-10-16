@@ -1,90 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 *{
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3rem;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.logo a {
-  color: #000;
-}
-
-ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-li {
- font-size: 1.2rem;
- font-weight: 500;
-}
-li a{
- color: #000;
-}
-
-li#btn-outline a {
-  color: #ff5722; /* สีของตัวอักษร */
-  border: 2px solid #ff5722; /* สีขอบ */
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-
-  /* เมื่อเมาส์วางอยู่บนปุ่ม */
-  &:hover {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .logo a {
+    color: #000;
+  }
+  
+  ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  li {
+   font-size: 1.2rem;
+   font-weight: 500;
+  }
+  li a{
+   color: #000;
+  }
+  
+  li#btn-outline a {
+    color: #ff5722; /* สีของตัวอักษร */
+    border: 2px solid #ff5722; /* สีขอบ */
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  
+    /* เมื่อเมาส์วางอยู่บนปุ่ม */
+    &:hover {
+      background-color: #ff5722;
+      color: #fff; /* สีข้อความเมื่อ hover */
+      border: 2px solid transparent; /* ลบขอบเมื่อ hover */
+    }
+  }
+  
+  li#btn-signin a {
+    color: #fff; /* สีของตัวอักษรเป็นสีดำ */
+    border: 2px solid #ff5722; /* สีขอบเป็นสีดำ */
     background-color: #ff5722;
-    color: #fff; /* สีข้อความเมื่อ hover */
-    border: 2px solid transparent; /* ลบขอบเมื่อ hover */
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  
+    /* เมื่อเมาส์วางอยู่บนปุ่ม */
+    &:hover {
+      background-color: #e64a19;
+    }
+  }
+  
+  .heading {
+    font-size: 60px;
+    font-weight: 600;
+    padding: 2rem;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+  }
+
+
+/* hamburger menu css */
+.hamburger-menu {
+
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color:#000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu-active {
+  display: block;
+}
+
+.detail {
+ margin: 2rem 5rem;
+}
+
+
+
+
+@media (min-width: 648px) { 
+  .hamburger-menu {
+      display: none;
   }
 }
+@media (max-width: 648px) {
 
-li#btn-signin a {
-  color: #fff; /* สีของตัวอักษรเป็นสีดำ */
-  border: 2px solid #ff5722; /* สีขอบเป็นสีดำ */
-  background-color: #ff5722;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-
-  /* เมื่อเมาส์วางอยู่บนปุ่ม */
-  &:hover {
-    background-color: #e64a19;
+  .menu {
+    display: none;
   }
-}
+    
+    nav {
+       width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.heading {
-  font-size: 60px;
-  font-weight: 600;
-  padding: 2rem;
-  text-align: center;
-  font-size: 28px;
-  color: #333;
-}
+    .menu {
+
+        width: 100%;
+    }
+
+    .menu li {
+        padding: 1rem 0.5rem;
+        transition: 0.3s;
+    }
+
+    li#btn-signin a, li#btn-outline a  {
+     color: #000;
+     background-color: transparent;
+     border: none;
+     padding: 0;
+    }
+
+    .menu li:hover  {
+       background-color: #e64a19;
+    }
+
+    .menu-active {
+        display: block;
+      }
+
+    
+    }
